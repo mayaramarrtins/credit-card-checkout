@@ -1,0 +1,359 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-weight: normal;
+}
+
+body {
+    background-color: #f0f2f5; 
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container-pai {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.card {
+    display: flex;
+    width: 90%; 
+    max-width: 900px; 
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    overflow: hidden; 
+}
+
+
+.secao-esquerda {
+    flex: 1;
+    background-image: url(imagens/fundo.png);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    overflow: hidden;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.background-design {
+    position: absolute;
+    bottom: -5vw;
+    left: -5vw;
+    width: 30vw; 
+    height: 30vw;
+    max-width: 300px;
+    max-height: 300px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+.conteudo-esquerda h2, h3 {
+    position: relative;
+    z-index: 1;
+    color: white;
+     font-weight: 600;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.conteudo-esquerda p {
+    font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+.secao-direita {
+    flex: 1.5; 
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.titulo-formulario {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #333;
+    text-align: left;
+}
+
+.form-pagamento {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-pagamento label {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+    display: block; 
+}
+
+.form-pagamento input[type="email"],
+.form-pagamento input[type="text"],
+.form-pagamento input[type="number"],
+.form-pagamento select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+.form-pagamento input:focus,
+.form-pagamento select:focus {
+    border-color: #870A39;
+    outline: none;
+}
+
+.form-pagamento input::placeholder {
+    color: #aaa;
+}
+
+.input-com-icone {
+    position: relative;
+    width: 100%;
+}
+
+.input-com-icone input {
+    padding-right: 40px; 
+}
+
+.icone-cartao {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 20px;
+}
+
+.linha-inputs {
+    display: flex;
+    gap: 20px;
+}
+
+.grupo-input {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.checkbox-container input[type="checkbox"] {
+    margin-right: 10px;
+    width: auto; 
+}
+
+.checkbox-container label {
+    margin: 0; 
+    font-size: 14px;
+    color: #555;
+}
+
+
+.resumo-pagamento {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.item-resumo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #555;
+}
+
+.item-resumo.total {
+    font-weight: 700;
+    font-size: 18px;
+    color: #333;
+    margin-top: 15px;
+}
+
+.separador {
+    border-bottom: 1px dashed #eee;
+    margin: 15px 0;
+}
+
+.botao-pagar {
+    background-color: #870A39; 
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 100%;
+}
+
+.botao-pagar:hover {
+    background-color: #6a082c; 
+    transform: translateY(-2px);
+}
+
+
+.texto-confirmacao {
+    font-size: 12px;
+    color: #888;
+    text-align: center;
+    margin-top: 20px;
+    line-height: 1.4;
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column;
+        width: 95%;
+        height: auto;
+        border-radius: 20px;
+    }
+
+    .secao-esquerda, .secao-direita {
+        width: 100%;
+        padding: 30px;
+        border-radius: 0; 
+    }
+
+    .secao-esquerda {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    .secao-direita {
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    .titulo-produto {
+        font-size: 30px;
+    }
+
+    .preco-produto {
+        font-size: 20px;
+    }
+
+    .lista-caracteristicas li {
+        font-size: 15px;
+    }
+
+    .titulo-formulario {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .linha-inputs {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    input, select {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+}
+
+    .background-design {
+         width: 25vw;
+        height: 25vw; 
+        bottom: -30px;
+        left: -30px;
+    }
+}
+
+
+@media (max-width: 768px) {
+  body {
+    align-items: flex-start;
+    padding: 20px 0;
+  }
+
+  .card {
+    box-shadow: none;
+    border-radius: 12px;
+  }
+
+  .container-pai {
+    align-items: flex-start;
+    padding-top: 20px;
+  }
+}
+
+
+@media (max-width: 480px) {
+    .secao-esquerda, .secao-direita {
+        padding: 20px;
+    }
+
+    .titulo-produto {
+        font-size: 24px;
+    }
+
+    .preco-produto {
+        font-size: 18px;
+    }
+
+    .lista-caracteristicas li {
+        font-size: 14px;
+    }
+
+    .titulo-formulario {
+        font-size: 20px;
+    }
+
+    .form-pagamento input,
+    .form-pagamento select,
+    .botao-pagar {
+        padding: 10px 12px;
+        font-size: 15px;
+    }
+
+    .item-resumo, .item-resumo.total {
+        font-size: 14px;
+    }
+
+    .texto-confirmacao {
+        font-size: 11px;
+    }
+
+    .background-design {
+         width: 20vw;
+        height: 20vw; 
+        bottom: -20px;
+        left: -20px;
+    }
+}
